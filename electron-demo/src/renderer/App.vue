@@ -1,12 +1,17 @@
 <template>
   <div id="app">
-    <router-view></router-view>
+    <v-header v-if="$route.name!='Login'"/>
+    <router-view class="body"/>
   </div>
 </template>
 
 <script>
+import Header from './components/header';
   export default {
-    name: 'electron-demo'
+    name: 'electron',
+    components: {
+    'v-header': Header,
+  }
   }
 </script>
 

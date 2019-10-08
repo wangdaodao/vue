@@ -10,6 +10,14 @@
       </div>
 
       <div class="right-side">
+        <el-row>
+  <el-button>默认按钮</el-button>
+  <el-button type="primary">主要按钮</el-button>
+  <el-button type="success">成功按钮</el-button>
+  <el-button type="info">信息按钮</el-button>
+  <el-button type="warning">警告按钮</el-button>
+  <el-button type="danger">危险按钮</el-button>
+</el-row>
         <div class="doc">
           <div class="title">Getting Started</div>
           <p>
@@ -23,7 +31,6 @@
           <div class="title alt">Other Documentation</div>
           <button class="alt" @click="open('https://electron.atom.io/docs/')">Electron</button>
           <button class="alt" @click="open('https://vuejs.org/v2/guide/')">Vue.js</button>
-          <a href="https://dldir1.qq.com/qqfile/qq/TIM2.3.2/21173/TIM2.3.2.21173.exe">下载</a>
         </div>
       </div>
     </main>
@@ -44,8 +51,7 @@
   }
 </script>
 
-<style lang="scss">
-
+<style>
   @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
 
   * {
@@ -93,7 +99,7 @@
   }
 
   .title {
-    color: $primary;
+    color: #2c3e50;
     font-size: 20px;
     font-weight: bold;
     margin-bottom: 6px;

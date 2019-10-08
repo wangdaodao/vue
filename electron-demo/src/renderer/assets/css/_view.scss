@@ -131,6 +131,35 @@ html,body{
     border: 1px solid $line;
     border-radius: 2px;
   }
+  .ui-tabs{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    .el-tabs__header{
+      background-color: #fff;
+      margin: 0;
+      
+    }
+    .el-tabs__item{
+      height: 54px;
+      line-height: 54px;
+    }
+    .el-tabs__content{
+      flex: 1;
+    }
+    .el-tab-pane{
+      display: flex;
+    flex-direction: column;
+    height: 100%;
+    }
+    .el-tabs__nav-wrap{
+      padding: 0 15px;
+      &:after{
+        height: 1px;
+        background-color: $line;
+      }
+    }
+  }
   .ui-table{
     flex: 1;
     padding: 0 10px 10px;

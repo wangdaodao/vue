@@ -7,7 +7,18 @@ import modules from './modules'
 
 Vue.use(Vuex)
 
+let state = {
+  isCollapse: false,
+};
+let mutations = {
+  switch(state) {   
+    state.isCollapse = !state.isCollapse
+  },
+};
+
 export default new Vuex.Store({
+  state,
+  mutations,
   modules,
   plugins: [
     createPersistedState(),

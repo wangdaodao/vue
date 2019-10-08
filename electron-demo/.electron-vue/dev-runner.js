@@ -64,17 +64,6 @@ function startRenderer () {
       {
         contentBase: path.join(__dirname, '../'),
         quiet: true,
-        // 解决跨域问题
-        proxy: {
-          '/api': {
-            target: 'http://xxx.com',
-            changeOrigin: true,
-            ws: false,
-            cookieDomainRewrite: {
-              'baidu.com': '127.0.0.1'
-            }
-          }
-        },
         before (app, ctx) {
           app.use(hotMiddleware)
           ctx.middleware.waitUntilValid(() => {

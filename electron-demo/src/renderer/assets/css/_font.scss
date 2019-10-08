@@ -10,14 +10,14 @@
   /* iOS 4.1- */
 }
 
-[class^="el-icon-"],
-[class*=" el-icon-"] {
-  font-family: "icon" !important;
-  font-size: 14px;
-  font-style: normal;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+// [class^="el-icon-"],
+// [class*=" el-icon-"] {
+//   font-family: "icon" !important;
+//   font-size: 14px;
+//   font-style: normal;
+//   -webkit-font-smoothing: antialiased;
+//   -moz-osx-font-smoothing: grayscale;
+// }
 
 .el-icon-arrow-down:before { content: "\e605"; }
 
