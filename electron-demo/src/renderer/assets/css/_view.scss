@@ -1,0 +1,239 @@
+@charset "utf-8";
+html,body{
+  width: 100%;
+  height: 100%;
+}
+#app{
+  width: 100%;
+  height: 100%;
+}
+.header{
+  width: 100%;
+  height: 75px;
+  background:#3C394A url(../img/titlebar-pattern.png) 98% top no-repeat;
+  .switch{
+    @include float;
+    height: 75px;
+    width: 64px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 24px;
+    color: #ccc;
+  }
+  .logo{
+    @include float;
+    font-size: 20px;
+    line-height: 75px;
+    background:linear-gradient(90deg, rgba(53,255,255,1) 0%, rgba(85,188,255,1) 100%);
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+    font-weight:bold;
+    letter-spacing:1px;
+  }
+  .nav{
+    @include float;
+    margin-left: 50px;
+    font-size: 16px;
+    line-height: 75px;
+    li{
+      @include float;
+    }
+    a{
+      display: block;
+      padding: 0 30px;
+      color: #fff;
+      letter-spacing:1px;
+      &.active{
+        background:linear-gradient(90deg,rgba(53,255,255,0.4) 0%,rgba(88,180,241,0.4) 100%);
+      }
+    }
+  }
+  .info{
+    @include float(right);
+    font-size: 16px;
+    line-height: 75px;
+    margin-right: 20px;
+    color: #fff;
+  }
+}
+.body{
+  display: flex;
+  height: calc(100% - 75px);
+  &.hideSide{
+    .sidebar{
+      width: 64px;
+      .el-menu--collapse{
+        width: 84px;
+      }
+    }
+    
+  }
+  .sidebar{
+    @include transition;
+    width: 180px;
+    height: 100%;
+    border-right: 1px solid $line;
+    overflow: hidden;
+    background:#322F3F;
+    .el-menu{
+      width: 200px;
+      background-color: transparent;
+      .el-menu-item, .el-submenu__title{
+        height: 48px;
+        line-height: 48px;
+        letter-spacing:2px;
+        color: #ccc;
+      }
+      .el-submenu{
+        .el-menu-item{
+          text-indent: 27px;
+          height: 40px;
+          line-height: 40px;
+        }
+      }
+      .el-submenu__title:hover,.el-submenu__title:focus {
+        background-color: rgba(255,255,255,0.1);
+      }
+      .el-menu-item:focus, .el-menu-item:hover{
+        background-color: rgba(255,255,255,0.1);
+      }
+    }
+    .el-menu-vertical{
+      background:#322F3F url(../img/nav-bar.png) 30px bottom no-repeat;
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: scroll;
+      border-right: none;
+      .is-active.el-menu-item{
+        background-color: rgba(255,255,255,0.1);
+        color: #3CF0FC;
+      }
+      .is-active .el-submenu__title{
+        color: #3CF0FC;
+      }
+      
+    }
+    
+  }
+  .content{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    overflow: hidden;
+    padding: 10px;
+  }
+  .ui-wrap{
+    flex: 1;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: #F2F4FA;
+    border: 1px solid $line;
+    border-radius: 2px;
+  }
+  .ui-table{
+    flex: 1;
+    padding: 0 10px 10px;
+    overflow: auto;
+  }
+  .ui-pagination{
+    height:32px ;
+    padding:0 0 10px 0;
+    text-align: right
+  }
+}
+// 二级收起菜单
+.el-menu--popup{
+  background:#322F3F;
+  // padding:5px 0;
+  border-radius: 4px;
+  &.el-menu--popup-right-start{
+    margin: 0;
+  }
+  .el-menu-item, .el-submenu__title{
+    height: 40px;
+    line-height: 40px;
+    letter-spacing:2px;
+    color: #ccc;
+  }
+  .is-active.el-menu-item{
+    background-color: rgba(255,255,255,0.1);
+    color: #3CF0FC;
+  }
+  .el-menu-item:hover,.el-menu-item:focus {
+    background-color: rgba(255,255,255,0.1);
+  }
+}
+// 通用操作栏
+.ui-option{
+  @include clear;
+  .option-left{
+    @include float;
+  }
+  .option-right{
+    @include float(right);
+  }
+  .option-item{
+    @include float;
+  }
+  .option-item+.option-item{
+    margin-left: 10px;
+  }
+  & ~ .ui-wrap{
+    margin-top: 10px;
+  }
+}
+
+// 新增表单列
+.form-col2 {
+  @include clear;
+  .el-form-item {
+    float: left;
+    width: calc(50% - 25px);
+    margin-right: 0;
+  }
+  .el-form-item:nth-child(2n) {
+    margin-left: 50px;
+  }
+}
+
+.form-col3 {
+  @include clear;
+  .el-form-item {
+    float: left;
+    width: calc(33.3% - 25px);
+    margin-right: 0;
+  }
+  .el-form-item:nth-child(3n+1) {
+    margin-right: 37px;
+  }
+  .el-form-item:nth-child(3n+2) {
+    margin-right: 37px;
+  }
+}
+
+.form-col4 {
+  @include clear;
+  .el-form-item {
+    float: left;
+    width: calc(25% - 15px);
+    margin-right: 0;
+    margin-left: 20px;
+  }
+  .el-form-item:nth-child(4n+1) {
+    margin-left: 0;
+  }
+}
+
+// 弹出默认大小
+.dialog-small {
+  width: 400px;
+}
+
+.dialog-middle {
+  width: 560px;
+}
+
+.dialog-large {
+  width: 720px;
+}

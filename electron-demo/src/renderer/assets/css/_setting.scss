@@ -1,0 +1,18 @@
+@charset "utf-8";
+// 基本颜色(可以使用lighten，darken)
+$primary: #0059ad !default;
+$red: #F32727 !default;
+$orange: #e7a939 !default;
+$yellow: #ffc400 !default;
+$green: #80b14d !default;
+$light-blue: #418ee7 !default;
+$gray: #555 !default;
+$light-gray: #666666 !default;
+// 常用颜色
+$line: #E5E5E5 !default;
+$icon: #888888 !default;
+$disable: #999999 !default;
+// 用于表格，下拉，树，日期
+$hover: #f5f7fa!default;
+
+$radius: 2px!default;
