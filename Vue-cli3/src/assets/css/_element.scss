@@ -1,0 +1,114 @@
+@charset "utf-8";
+.el-table{
+  // 针对卡片样式
+  &.table-card{
+    background-color: transparent;
+    th,tr{
+      background-color: transparent;
+    }
+    td,th{
+      border-bottom: none;
+    }
+    .el-table__header-wrapper{
+      th{
+        color: $gray;
+        padding: 12px 0 0 0;
+      }
+    }
+    .el-table__body-wrapper{
+      table{
+        border-collapse:separate;
+        border-spacing:0px 10px;
+      }
+      td,th{
+        padding: 5px 0;
+      }
+      .el-table__row{
+        &:hover{
+          td{
+            background-color: #F4FFFF;
+            border-color: #55BCFF;
+          }
+          td:first-child,td:last-child{
+            border-color: #55BCFF;
+          }
+        }
+        td{
+          background-color: #fff;
+          padding-top:10px;
+          padding-bottom: 10px; 
+          border-top:1px solid $line;
+          border-bottom:1px solid $line;
+        }
+        td:first-child{
+          border-left: 1px solid $line;
+          border-radius:2px 0px 0px 2px;
+          padding-left: 3px;
+          .cell::before{
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            width: 4px;
+            background:linear-gradient(180deg,rgba(0,205,255,1) 0%,rgba(0,158,255,1) 100%);
+            border-radius:2px 0px 0px 2px;
+            opacity:0.5;
+          }
+        }
+        td:last-child{
+          border-right: 1px solid $line;
+          border-radius:0 2px 2px 0;
+        }
+      }
+    }
+  }
+  &.table-list{
+    .el-table__header-wrapper{
+      th{
+        background-color: #3C394A;
+        border-right: 1px solid #3C394A;
+      }
+    }
+  }
+}
+.el-pagination{
+  button:disabled{
+    background-color: transparent;
+  }
+  .btn-next,.btn-prev{
+    background-color: transparent;
+  }
+  .el-pager{
+    li{
+      background: transparent;
+    }
+  }
+}
+.el-dialog{
+  .el-dialog__header{
+    background-color: #3C394A;
+    padding:8px 10px;
+  }
+  .el-dialog__title{
+    color: #fff;
+    font-size: 16px;
+  }
+  .el-dialog__headerbtn{
+    font-size: 20px;
+    top: 7px;
+    right: 10px;
+    color: #fff;
+  }
+  .el-dialog__body{
+    padding: 20px 20px 0 20px;
+  }
+}
+.el-form{
+  .el-form-item{
+    margin-bottom: 10px;
+  }
+  .el-form-item__label{
+    padding: 0;
+  }
+}

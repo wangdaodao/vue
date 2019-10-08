@@ -1,0 +1,1 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([["yhgl"],{c50f:function(n,t,e){"use strict";e.r(t);var s={data:function(){return{}},mounted:function(){},components:{},methods:{}},c=e("2877"),o=Object(c.a)(s,function(){var n=this.$createElement;return(this._self._c||n)("div",{staticClass:"yhgl"})},[],!1,null,null,null);t.default=o.exports}}]);
